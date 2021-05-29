@@ -42,8 +42,7 @@ pipeline{
 				}
 			}
 		}
-	}
-	stage('Deploy') {
+	  stage('Deploy') {
 			steps {
 				echo 'Deploy'
 				sh 'docker build -t deploy -f Dockerfile_socketio_deploy .'
@@ -60,6 +59,8 @@ pipeline{
 				}
             		}
 		}
+	}
+	
 }
 
 def messageFunction(stage, status) {
